@@ -11,7 +11,7 @@ type Component = (props: { req: Request }) => unknown;
 const render = createRenderer();
 
 const path = resolve(Deno.cwd(), "pages");
-const pages = deepReaddir(path).map(
+const pages = (await deepReaddir(path)).map(
     x => x.replace(/\.tsx?$/, "")
 );
 

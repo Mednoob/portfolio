@@ -1,10 +1,10 @@
-export function deepReaddir(path: string): string[] {
-    const files = Deno.readDirSync(path);
+export async function deepReaddir(path: string): Promise<string[]> {
+    const files = Deno.readDir(path);
     const result = [];
-    for (const file of files) {
+    for await (const file of files) {
         if (file.isDirectory) {
             result.push(
-                ...deepReaddir(`${path}/${file.name}`)
+                ...(await deepReaddir(`${path}/${file.name}`))
                     .map(x => `/${file.name}${x}`)
             );
         } else {
