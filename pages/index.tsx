@@ -8,7 +8,7 @@ export default function Home() {
         <>
             <Navbar />
             <div class="w-screen h-screen flex justify-center items-center">
-                <p class="font-bold text-2xl">Hello, world! Deno v{Deno.version.deno}</p>
+                <p class="font-bold text-2xl">Hello, world!</p>
             </div>
         </>
     )
