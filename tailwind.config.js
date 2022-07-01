@@ -1,2 +1,2 @@
 // Emit tailwind intellisense
-module.exports = {};
+module.exports={};

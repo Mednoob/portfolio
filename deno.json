@@ -1,9 +1,6 @@
 {
-    "compilerOptions": {
-        "lib": [
-            "dom",
-            "dom.asynciterable",
-            "deno.ns"
-        ]
-    }
+  "tasks": {
+    "start": "deno run -A --watch=static/,routes/ dev.ts"
+  },
+  "importMap": "./import_map.json"
 }
